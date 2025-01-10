@@ -74,8 +74,8 @@ Saatavilla olevat mallit:
 ```bash
 git clone https://github.com/Pakokauhu/Tutka.git
 cd Pakokauhu/
-chmod +x install.sh
-./install.sh
+chmod +x asennus.sh
+./asennus.sh
 ```
 
 ### BlackArch Linux
@@ -156,7 +156,7 @@ Muuttujat:
 ##################
 
 # Vaihe 1 : Ensimmäisessä terminaalissa
-$ python3 metsastaja.py
+$ python3 Tutka.py
 
 # Vaihe 2 : Toisessa terminaalissa käynnistä tunnelipalvelu, kuten ngrok
 $ ./ngrok http 8080
