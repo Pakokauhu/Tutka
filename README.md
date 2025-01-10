@@ -72,8 +72,8 @@ Saatavilla olevat mallit:
 ### Kali Linux / Arch Linux / Ubuntu / Fedora / Parrot OS / Termux
 
 ```bash
-git clone https://github.com/Chae-Tzuyu/Metsastaja.git
-cd metsastaja/
+git clone https://github.com/Pakokauhu/Tutka.git
+cd Pakokauhu/
 chmod +x install.sh
 ./install.sh
 ```
@@ -81,23 +81,22 @@ chmod +x install.sh
 ### BlackArch Linux
 
 ```bash
-sudo pacman -S metsastaja
+sudo pacman -S Tutka
 ```
 
 ### Docker
 
 ```bash
-docker pull Chae-Tzuyu/metsastaja
+docker pull Pakokauhu/Tutka
 ```
 
 ### OSX
 ```bash
-git clone https://github.com/Chae-Tzuyu/Metsastaja.git
-cd seeker/
-python3 metsastaja.py
+git clone https://github.com/Pakokauhu/Tutka.git
+cd Tutka/
+python3 Tutka.py
 ````
 
-In order to run in tunnel mode, install ngrok by running this command in the terminal:
 ```bash
 brew install ngrok/ngrok/ngrok
 
