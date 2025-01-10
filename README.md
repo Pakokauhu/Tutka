@@ -6,7 +6,7 @@
 </div>
 
 
-Konsepti Metsästäjästä on yksinkertainen: Teimme sivun joka pyytää sijaintia, kuten monet suositut sijaintiin perustuvat verkkosivustot. Metsästäjä isännöi valeverkkosivustoa, joka kysyy sijaintilupaa, ja jos kohde myöntää sen, voimme saada:
+Konsepti Tutkasta on yksinkertainen: Tein sivun joka pyytää sijaintia, kuten monet suositut sijaintiin perustuvat verkkosivustot. Metsästäjä isännöi valeverkkosivustoa, joka kysyy sijaintilupaa, ja jos kohde myöntää sen, voimme saada:
 
 * Pituusaste
 * Leveysaste
@@ -37,7 +37,7 @@ Konsepti Metsästäjästä on yksinkertainen: Teimme sivun joka pyytää sijaint
 
 * Muut työkalut ja palvelut tarjoavat IP-geo-sijaintia, joka EI ole tarkka ollenkaan, eikä se anna kohteen sijaintia, vaan se on ISP:n arvioitu sijainti.
 
-* Metsästäjä käyttää HTML API:a ja saa sijaintiluvan, ja sitten se nappaa pituusasteen ja leveysasteen laitteen GPS-laitteiston avulla, joten Seeker toimii parhaiten älypuhelimilla. Jos GPS-laitteistoa ei ole, kuten kannettavassa tietokoneessa, Seeker siirtyy IP-geo-sijaintiin tai etsii välimuistissa olevia koordinaatteja.
+* Tutka käyttää HTML API:a ja saa sijaintiluvan, ja sitten se nappaa pituusasteen ja leveysasteen laitteen GPS-laitteiston avulla, joten Seeker toimii parhaiten älypuhelimilla. Jos GPS-laitteistoa ei ole, kuten kannettavassa tietokoneessa, Seeker siirtyy IP-geo-sijaintiin tai etsii välimuistissa olevia koordinaatteja.
 
 * Yleisesti ottaen, jos käyttäjä hyväksyy sijaintiluvan, saamasi tiedon tarkkuus on **noin 30 metrin tarkkuudella**.
 
@@ -107,9 +107,9 @@ ngrok http 8080
 ## Usage
 
 ```bash
-python3 metsastaja.py -h
+python3 Tutka.py -h
 
-usage: metsastaja.py [-h] [-k KML] [-p PORT] [-u] [-v] [-t TEMPLATE] [-d] [--telegram token:chatId] [--webhook WEBHOOK]
+usage: Tutka.py [-h] [-k KML] [-p PORT] [-u] [-v] [-t TEMPLATE] [-d] [--telegram token:chatId] [--webhook WEBHOOK]
 
 
 asetukset:
@@ -167,14 +167,14 @@ $ ./ngrok http 8080
 ###########
 
 # Tulosta KML-tiedosto Google Earthille
-$ python3 metsastaja.py -k <tiedostonimi>
+$ python3 Tutka.py -k <tiedostonimi>
 
 # Käytä mukautettua porttia
-$ python3 metsastaja.py -p 1337
+$ python3 Tutka.py -p 1337
 $ ./ngrok http 1337
 
 # Valitse etukäteen tietty malli
-$ python3 metsastaja.py -t 1
+$ python3 Tutka.py -t 1
 
 ################
 # Dockerin käyttö #
@@ -184,7 +184,7 @@ $ python3 metsastaja.py -t 1
 $ docker network create ngroknet
 
 # Vaihe 2
-$ docker run --rm -it --net ngroknet --name seeker Chae-Tzuyu/metsastaja
+$ docker run --rm -it --net ngroknet --name seeker Pakokauhu/Tutka
 
 # Vaihe 3
-$ docker run --rm -it --net ngroknet --name ngrok wernight/ngrok ngrok http metsastaja:8080
+$ docker run --rm -it --net ngroknet --name ngrok wernight/ngrok ngrok http Tutka:8080
