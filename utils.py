@@ -18,4 +18,4 @@ def tulosta(teksti, **args):
     if sys.stdout.isatty():
         builtins.print(teksti, flush=True, **args)
     else:
-        builtins.print(re.sub('\33\[\d+m', ' ', teksti), flush=True, **args)
+        builtins.print(re.sub(r'\33\[\d+m', ' ', teksti), flush=True, **args)
