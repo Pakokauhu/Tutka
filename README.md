@@ -73,7 +73,7 @@ Saatavilla olevat mallit:
 
 ```bash
 git clone https://github.com/Pakokauhu/Tutka.git
-cd Pakokauhu/
+cd Tutka/
 chmod +x asennus.sh
 ./asennus.sh
 ```
